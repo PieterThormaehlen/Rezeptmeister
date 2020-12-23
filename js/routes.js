@@ -1,36 +1,42 @@
 const routes = [
 	{
-		path: '/',
+		path: '',
 		init() {
 			initMainPage()
 		},
 	},
 	{
-		path: '/Rezepte.html',
+		path: 'index.html',
+		init() {
+			initMainPage()
+		},
+	},
+	{
+		path: 'Rezepte.html',
 		init() {
 			displayRecipeList('all', '.recipes')
 		},
 	},
 	{
-		path: '/Meine_Rezepte.html',
+		path: 'Meine_Rezepte.html',
 		init() {
 			displayRecipeList('local', '.recipes')
 		},
 	},
 	{
-		path: '/Lieblingsrezepte.html',
+		path: 'Lieblingsrezepte.html',
 		init() {
 			displayRecipeList('favourised', '.recipes')
 		},
 	},
 	{
-		path: '/Rezept.html',
+		path: 'Rezept.html',
 		init() {
 			initRecipePage()
 		},
 	},
 	{
-		path: '/Rezept_Bearbeiten.html',
+		path: 'Rezept_Bearbeiten.html',
 		init() {
 			initEditRecipePage()
 		},

@@ -37,7 +37,10 @@ Router = class {
 		})
 	}
 	matchPathnameToRoute(pathname) {
-		return routes.find((route) => route.path.replace(/^\//, '') === pathname.replace(/^\//, ''))
+		let currentPathname = pathname
+		if (currentPathname.startsWith('/')) currentPathname = currentPathname.substring(1)
+		if (currentPathname.startsWith('Rezeptmeister')) currentPathname = currentPathname.substring(currentPathname.indexOf('/') + 1)
+		return routes.find((route) => route.path.replace(/^\//, '') === currentPathname.replace(/^\//, ''))
 	}
 	loadRoute(pathname, fragment) {
 		const matchedRoute = this.matchPathnameToRoute(pathname)

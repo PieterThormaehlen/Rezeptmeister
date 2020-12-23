@@ -62,7 +62,7 @@ const Recipelist = class extends Array {
 }
 
 const loadRecipesFromJSONFile = async () => {
-	const response = await fetch('/assets/recipelist.json')
+	const response = await fetch('assets/recipelist.json')
 	const data = await response.json()
 	recipes.public = new Recipelist(
 		data.map((recipe) => {

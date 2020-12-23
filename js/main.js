@@ -46,7 +46,7 @@ const Recipe = class {
 		Object.assign(this, recipeObject)
 	}
 	openViewer() {
-		router.loadRoute('/Rezept.html', this.identifier)
+		router.loadRoute('Rezept.html', this.identifier)
 	}
 	favourise() {
 		let favourites = JSON.parse(localStorage.favourites)
@@ -66,7 +66,7 @@ const Recipe = class {
 
 const LocalRecipe = class extends Recipe {
 	openEditor() {
-		router.loadRoute('/Rezept_Bearbeiten.html', this.identifier)
+		router.loadRoute('Rezept_Bearbeiten.html', this.identifier)
 	}
 	delete() {
 		console.log(this.name, 'is removed')
@@ -123,7 +123,7 @@ const placeRecipes = (recipelist, targetSelector) => {
 	let recipesFragment = document.createDocumentFragment()
 	recipelist.forEach((recipe) => {
 		const recipeArticle = document.getElementById('recipeArticle').content.cloneNode(true)
-		recipeArticle.querySelector('a').href = '/Rezept.html#' + recipe.identifier
+		recipeArticle.querySelector('a').href = 'Rezept.html#' + recipe.identifier
 		const widths = [320, 480, 640, 960, 1280]
 		const imagedata = {
 			alt: recipe.name,
@@ -131,11 +131,11 @@ const placeRecipes = (recipelist, targetSelector) => {
 			sizes: '(min-width: 65rem) calc((60rem - 2rem) / 3), (min-width: 50rem) calc((100vw - 4rem) / 3), calc((100vw - 3rem) / 2)',
 		}
 		if (recipe.thumbnail) {
-			imagedata.src = `/assets/recipes/${recipe.identifier}/thumbnails/${widths[0]}.jpeg`
-			imagedata.srcset = imagedata.formats.map((format) => widths.map((width) => `/assets/recipes/${recipe.identifier}/thumbnails/${width}.${format} ${width}w`).join(', '))
+			imagedata.src = `assets/recipes/${recipe.identifier}/thumbnails/${widths[0]}.jpeg`
+			imagedata.srcset = imagedata.formats.map((format) => widths.map((width) => `assets/recipes/${recipe.identifier}/thumbnails/${width}.${format} ${width}w`).join(', '))
 		} else {
-			imagedata.src = `/assets/thumbnails/${widths[0]}.jpeg`
-			imagedata.srcset = imagedata.formats.map((format) => widths.map((width) => `/assets/thumbnails/${width}.${format} ${width}w`).join(', '))
+			imagedata.src = `assets/thumbnails/${widths[0]}.jpeg`
+			imagedata.srcset = imagedata.formats.map((format) => widths.map((width) => `assets/thumbnails/${width}.${format} ${width}w`).join(', '))
 		}
 
 		if (recipe.source === 'JSONFile') recipeArticle.querySelector('a').appendChild(getPicture(imagedata))
@@ -218,7 +218,7 @@ const getRecipe = async (identifier) => {
 	const favourites = JSON.parse(localStorage.favourites)
 	let responseRecipe
 	if (recipe.source === 'JSONFile') {
-		const response = await fetch(`/assets/recipes/${recipe.identifier}/recipe.json`)
+		const response = await fetch(`assets/recipes/${recipe.identifier}/recipe.json`)
 		const data = await response.text()
 		responseRecipe = new Recipe(JSON.parse(data))
 		responseRecipe.source = 'JSONFile'
@@ -259,11 +259,11 @@ const initRecipePage = async () => {
 		sizes: '(min-width: 65rem) 60rem, 100vw',
 	}
 	if (recipe.thumbnail) {
-		imagedata.src = `/assets/recipes/${recipe.identifier}/titleimage/${widths[0]}.jpeg`
-		imagedata.srcset = imagedata.formats.map((format) => widths.map((width) => `/assets/recipes/${recipe.identifier}/titleimage/${width}.${format} ${width}w`).join(', '))
+		imagedata.src = `assets/recipes/${recipe.identifier}/titleimage/${widths[0]}.jpeg`
+		imagedata.srcset = imagedata.formats.map((format) => widths.map((width) => `assets/recipes/${recipe.identifier}/titleimage/${width}.${format} ${width}w`).join(', '))
 	} else {
-		imagedata.src = `/assets/titleimage/${widths[0]}.jpeg`
-		imagedata.srcset = imagedata.formats.map((format) => widths.map((width) => `/assets/titleimage/${width}.${format} ${width}w`).join(', '))
+		imagedata.src = `assets/titleimage/${widths[0]}.jpeg`
+		imagedata.srcset = imagedata.formats.map((format) => widths.map((width) => `assets/titleimage/${width}.${format} ${width}w`).join(', '))
 	}
 	if (recipe.source === 'JSONFile') document.querySelector('.controls').after(getPicture(imagedata))
 	else {
@@ -482,8 +482,8 @@ const initEditRecipePage = async () => {
 	})
 	form.title.value = recipe.name
 	document.title = recipe.name + ' Bearbeiten'
-	const placeholderImageSRC = '/assets/titleimage.jpg'
-	let previousImageSRC = '/assets/titleimage.jpg'
+	const placeholderImageSRC = 'assets/titleimage.jpg'
+	let previousImageSRC = 'assets/titleimage.jpg'
 	let imageSRCChanged
 	let imageDeleted = false
 	initializedlocalRecipeImages.then(() => {
