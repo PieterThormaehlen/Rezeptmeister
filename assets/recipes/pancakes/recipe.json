@@ -1,0 +1,29 @@
+{
+	"name": "Pancakes",
+	"identifier": "pancakes",
+	"thumbnail": true,
+	"titleimage": true,
+	"cookingTime": 8,
+	"difficulty": 1,
+	"diets": ["Vegetarisch", "Vegan"],
+	"ingredients": [
+		{
+			"name": "Hamburger Brötchen",
+			"amount": 1,
+			"unit": "amount"
+		},
+		{
+			"name": "Hackfleisch",
+			"amount": 150,
+			"unit": "g"
+		},
+		{
+			"name": "Tomatenketchup",
+			"amount": 4,
+			"unit": "ml"
+		}
+	],
+	"steps": ["Forme das Hackfleisch und brate es", "Lege das Gebratene Hackfleisch auf das Brötchen", "Schmiere Tomatenketchup Obendrauf"],
+	"published": 1608289378992,
+	"favourisations": 82
+}

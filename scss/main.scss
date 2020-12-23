@@ -1,0 +1,773 @@
+:root {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+	font-size: 1rem;
+	color: #202020;
+	background-color: #f8f8f8;
+	overflow: hidden;
+
+	::selection {
+		background: #e0e0e0;
+	}
+}
+
+*,
+::before,
+::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	overflow: hidden;
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+}
+
+header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	height: 4em;
+	z-index: 3;
+	background-color: #ffffff;
+	box-shadow: 0 0.5px 1.4px rgba(0, 0, 0, 0.02625), 0 1.5px 3.8px rgba(0, 0, 0, 0.0375), 0 3.6px 9px rgba(0, 0, 0, 0.04875), 0 12px 30px rgba(0, 0, 0, 0.075);
+
+	@media (min-width: 50rem) {
+		height: 5em;
+	}
+}
+
+.logo,
+.navtoggle {
+	display: block;
+	height: 100%;
+	width: fit-content;
+	padding: 0.5em;
+	font-size: 1rem;
+	border: none;
+	outline: none;
+	background-color: #e9e9e900;
+	cursor: pointer;
+}
+
+.logo {
+	color: #ffffff;
+	filter: drop-shadow(0 0.5px 1.4px rgba(0, 0, 0, 0)) drop-shadow(0 1.5px 3.8px rgba(0, 0, 0, 0)) drop-shadow(0 3.6px 9px rgba(0, 0, 0, 0)) drop-shadow(0 12px 30px rgba(0, 0, 0, 0));
+	transition: all 0.25s ease;
+
+	&:hover {
+		filter: drop-shadow(0 0.5px 1.4px rgba(0, 0, 0, 0.0525)) drop-shadow(0 1.5px 3.8px rgba(0, 0, 0, 0.075)) drop-shadow(0 3.6px 9px rgba(0, 0, 0, 0.0975)) drop-shadow(0 12px 30px rgba(0, 0, 0, 0.15));
+	}
+}
+
+.navtoggle:hover svg {
+	background: #e9e9e9;
+	box-shadow: 0 0.5px 1.4px rgba(0, 0, 0, 0.02625), 0 1.5px 3.8px rgba(0, 0, 0, 0.0375), 0 3.6px 9px rgba(0, 0, 0, 0.04875), 0 12px 30px rgba(0, 0, 0, 0.075);
+}
+
+.logo svg,
+.navtoggle svg {
+	fill: currentColor;
+	height: 100%;
+}
+
+.logo svg {
+	stroke: #c9c9c9;
+	stroke-width: 10px;
+}
+
+.navtoggle svg {
+	border-radius: 0.5rem;
+	transition: all 0.25s ease;
+}
+
+.navtoggle {
+	@media (min-width: 50rem) {
+		display: none;
+	}
+}
+
+nav {
+	display: none;
+	position: fixed;
+	top: 4em;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: #ffffff;
+	flex-direction: column;
+	align-items: stretch;
+	overflow-y: auto;
+	z-index: -1;
+
+	[data-shownav] & {
+		display: flex;
+	}
+
+	@media (min-width: 50rem) {
+		display: flex;
+		position: unset;
+		flex-direction: row;
+		align-items: center;
+		margin: 0 auto;
+	}
+}
+
+nav a {
+	display: flex;
+	justify-content: flex-end;
+	font-size: 1.25rem;
+	padding: 0.5rem 1rem;
+	height: 2.5rem;
+	text-decoration: none;
+	color: #202020;
+	white-space: nowrap;
+	transition: all 0.25s ease;
+
+	&:hover {
+		background-color: #e9e9e9;
+		box-shadow: 0 0.5px 1.4px rgba(0, 0, 0, 0.02625), 0 1.5px 3.8px rgba(0, 0, 0, 0.0375), 0 3.6px 9px rgba(0, 0, 0, 0.04875), 0 12px 30px rgba(0, 0, 0, 0.075);
+	}
+
+	@media (min-width: 50rem) {
+		background-color: #f8f8f8;
+		border-radius: 0.5rem;
+		margin: 0 0.5rem;
+	}
+}
+
+nav a svg {
+	height: 100%;
+	margin-left: 1rem;
+}
+
+.container {
+	overflow: auto;
+	flex-grow: 1;
+
+	[data-shownav] &,
+	[data-showModal] & {
+		overflow: hidden;
+		user-select: none;
+	}
+
+	@media (min-width: 50rem) {
+		[data-shownav] & {
+			overflow: auto;
+			user-select: unset;
+		}
+	}
+}
+
+/*####################################################################################################
+Main #################################################################################################
+####################################################################################################*/
+
+main {
+	display: none;
+	padding: 1rem;
+	gap: 1em;
+	grid-auto-rows: min-content;
+	grid-auto-flow: dense;
+	align-items: start;
+
+	[data-loaded] & {
+		display: grid;
+	}
+
+	@media (min-width: 50rem) {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	@media (min-width: 65rem) {
+		width: 60rem;
+		margin: 0 auto;
+		padding: 1rem 0;
+	}
+}
+
+main > * {
+	grid-column: 1 / 3;
+}
+
+form {
+	display: grid;
+	gap: 1em;
+	grid-auto-rows: min-content;
+	grid-auto-flow: dense;
+	align-items: start;
+
+	@media (min-width: 50rem) {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+form > * {
+	grid-column: 1 / 3;
+}
+
+h1 {
+	font-size: 2rem;
+}
+
+h2 {
+	font-size: 1.25rem;
+}
+
+.controls {
+	display: flex;
+	flex-wrap: wrap;
+	margin: -0.25rem;
+}
+
+.controls > * {
+	margin: 0.25rem;
+	white-space: nowrap;
+	flex-grow: 1;
+	flex-shrink: 1;
+}
+
+.controls h1 {
+	white-space: unset;
+	max-width: 100%;
+	flex-grow: 2;
+}
+
+.controls .favourise {
+	flex-grow: 0;
+}
+
+.controls [name='search'] {
+	min-width: 50%;
+	flex-grow: 2;
+	padding-right: 3rem;
+	width: 100%;
+	background: #ffffff no-repeat calc(100% - 0.75rem) center url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z'/%3E%3Cpath fill-rule='evenodd' d='M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z'/%3E%3C/svg%3E");
+	background-size: 24px;
+
+	@media (min-width: 25rem) {
+		width: unset;
+	}
+}
+
+main select,
+main label,
+main input,
+main textarea,
+main button {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 2.5rem;
+	padding: 0.5rem 0.75rem;
+	font-size: 1.25rem;
+	border-radius: 0.5rem;
+	border: none;
+	outline: none;
+	background-color: #ffffff;
+	color: #202020;
+	transition: all 0.25s ease;
+
+	&:hover {
+		box-shadow: 0 0.5px 1.4px rgba(0, 0, 0, 0.02625), 0 1.5px 3.8px rgba(0, 0, 0, 0.0375), 0 3.6px 9px rgba(0, 0, 0, 0.04875), 0 12px 30px rgba(0, 0, 0, 0.075);
+		z-index: 1;
+	}
+}
+
+main button,
+main label {
+	cursor: pointer;
+}
+
+main button svg,
+main label svg {
+	height: 100%;
+	fill: currentColor;
+}
+
+main .button-labelled svg,
+main label svg {
+	padding-left: 1.5rem;
+}
+
+button[favourised] {
+	background-color: #c22f3d;
+	color: #ffffff;
+}
+
+button[data-remove],
+button[data-reset],
+.image button,
+button[name='AddIngredient'],
+button[name='AddStep'] {
+	padding: 0.25rem;
+}
+
+button[name='AddIngredient'],
+button[name='AddStep'] {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+main label[data-checked],
+[data-showFilters] .filter,
+[data-showOrderBy] .order {
+	background-color: #cfcfcf;
+	box-shadow: 0 0.5px 1.4px rgba(0, 0, 0, 0.0525), 0 1.5px 3.8px rgba(0, 0, 0, 0.075), 0 3.6px 9px rgba(0, 0, 0, 0.0975), 0 12px 30px rgba(0, 0, 0, 0.15);
+	z-index: 2;
+
+	&:hover {
+		box-shadow: 0 0.5px 1.4px rgba(0, 0, 0, 0.0525), 0 1.5px 3.8px rgba(0, 0, 0, 0.075), 0 3.6px 9px rgba(0, 0, 0, 0.0975), 0 12px 30px rgba(0, 0, 0, 0.15);
+	}
+}
+
+[data-showOrderBy] .orderBy,
+[data-showFilters] .filters {
+	display: block;
+}
+
+.orderBy,
+.filters {
+	display: none;
+	background-color: #e9e9e9;
+	padding: 1em;
+	border-radius: 0.5em;
+}
+
+.orderBy article,
+.filters article,
+.editMetadata article {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -0.25rem -0.25rem -0.25rem;
+}
+
+.filters article:not(:first-child),
+.editMetadata article:not(:first-child) {
+	margin-top: 1em;
+}
+
+.orderBy span,
+.filters span,
+.editMetadata span {
+	flex: 0 0 100%;
+	margin: 0 0.25rem;
+}
+
+.orderBy label,
+.filters label,
+.editMetadata label,
+.filters button,
+.editMetadata button {
+	flex: 0 0 auto;
+	margin: 0.25rem;
+}
+
+.orderBy input,
+.filters input,
+.editMetadata input:not([type='number']) {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+}
+
+.orderBy article,
+.maxCookingTime,
+.cookingTime,
+.difficulty {
+	margin: 0 -0.1rem -0.1rem -0.1rem;
+}
+
+.orderBy article span,
+.maxCookingTime span,
+.cookingTime span,
+.difficulty span {
+	margin: 0 0.1rem 0.24rem;
+}
+
+.orderBy article label,
+.maxCookingTime label,
+.cookingTime input,
+.difficulty label {
+	border-radius: unset;
+	margin: 0.1rem;
+
+	&:first-of-type {
+		border-top-left-radius: 0.5em;
+		border-bottom-left-radius: 0.5em;
+	}
+
+	&:last-of-type {
+		border-top-right-radius: 0.5em;
+		border-bottom-right-radius: 0.5em;
+	}
+}
+
+.maxCookingTime button,
+.difficulty button {
+	margin: 0.1rem 0.1rem 0.1rem 0.4rem;
+}
+
+.recipes {
+	display: grid;
+	grid-gap: 1em;
+	grid-template-columns: repeat(2, 1fr);
+
+	@media (min-width: 50rem) {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+.recipe {
+	display: flex;
+	flex-direction: column;
+	color: #202020;
+}
+
+.recipe a {
+	border-radius: 0.5em;
+	cursor: pointer;
+	outline: none;
+	transition: all 0.25s ease;
+	height: calc(((100vw - 3em) / 2) / 16 * 9);
+	width: 100%;
+	color: #202020;
+	text-decoration: none;
+
+	@media (min-width: 50rem) {
+		height: calc(((100vw - 4em) / 3) / 16 * 9);
+	}
+
+	@media (min-width: 65rem) {
+		height: calc(((60em - 2em) / 3) / 16 * 9);
+	}
+}
+
+.recipe a img {
+	transition: all 0.25s ease;
+}
+
+.recipe a:hover img {
+	box-shadow: 0 0.5px 1.4px rgba(0, 0, 0, 0.105), 0 1.5px 3.8px rgba(0, 0, 0, 0.15), 0 3.6px 9px rgba(0, 0, 0, 0.195), 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.recipe a:active img {
+	transform: scale(0.95);
+	transition: all 0.075s ease;
+}
+
+.recipe img {
+	order: 1;
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
+.recipe span {
+	order: 2;
+	margin: 0.25em;
+	font-size: 1.15em;
+	text-align: left;
+}
+
+img {
+	width: 100%;
+	border-radius: 0.5em;
+	display: block;
+}
+
+.ingredientList {
+	background-color: #e9e9e9;
+	padding: 1em;
+	border-radius: 0.5em;
+	max-width: 100%;
+	min-width: 0;
+
+	@media (min-width: 50rem) {
+		grid-column: 1 / 2;
+	}
+}
+
+.ingredientHeader {
+	display: flex;
+	align-items: center;
+	margin-bottom: 1em;
+	white-space: nowrap;
+}
+
+.ingredientHeader h2 {
+	line-height: 2rem;
+}
+
+.portions {
+	align-self: flex-end;
+	font-size: 0.8rem;
+	line-height: 1.65rem;
+	margin-left: 0.5em;
+}
+
+.ingredientHeader button {
+	flex: 0 0 2rem;
+	height: 1.5rem;
+	border-radius: unset;
+	padding: 0 0.2rem;
+
+	&:first-of-type {
+		justify-content: flex-end;
+		margin-left: auto;
+		margin-right: 0.2rem;
+		border-top-left-radius: 0.75rem;
+		border-bottom-left-radius: 0.75rem;
+	}
+
+	&:last-of-type {
+		justify-content: flex-start;
+		border-top-right-radius: 0.75rem;
+		border-bottom-right-radius: 0.75rem;
+	}
+}
+
+.ingredients article {
+	display: flex;
+	justify-content: space-between;
+	padding: 0.25em 0;
+}
+
+.ingredientInput .inputElements {
+	flex: 1 1 auto;
+	margin-right: 0.25rem;
+	display: flex;
+}
+
+.ingredientInput .inputElements > * + * {
+	margin-left: 0.2rem;
+}
+
+.ingredientInput [name='name'] {
+	width: 0px;
+	border-radius: 0.5rem 0 0 0.5rem;
+}
+
+.ingredientInput [name='amount'] {
+	flex: 0 1 5.5ch;
+	width: 5.5ch;
+	border-radius: unset;
+}
+
+.ingredientInput [name='unit'] {
+	display: block;
+	// font-size: 16px;
+	padding-right: 2rem;
+	appearance: none;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='currentColor' class='bi bi-chevron-up' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='m 12.35739,5.6591955 c -0.195,-0.2 -0.513,-0.2 -0.708,0 l -3.6459997,3.64 -3.646,-3.64 c -0.472,-0.48 -1.18,0.23 -0.708,0.7 l 4,4.0000005 c 0.195,0.2 0.513,0.2 0.708,0 L 12.35739,6.3591955 a 0.49,0.49 0 0 0 0,-0.7 z'/%3E%3C/svg%3E"), linear-gradient(to bottom, #ffffff 0%, #ffffff 100%);
+	background-repeat: no-repeat, repeat;
+	background-position: right 0.3em top 50%, 0 0;
+	background-size: 1.5rem auto, 100%;
+	border-radius: 0 0.5rem 0.5rem 0;
+
+	&::-ms-expand {
+		display: none;
+	}
+}
+
+.ingredientInput [name='unit'] option {
+	font-weight: normal;
+}
+
+.metadata,
+.editMetadata {
+	min-width: 0;
+	@media (min-width: 50rem) {
+		grid-column: 2 / 3;
+	}
+}
+
+.metadata span {
+	display: block;
+	font-weight: 600;
+}
+
+.metadata .label {
+	font-weight: 400;
+}
+
+.metadata article:not(:first-child) {
+	margin-top: 1em;
+}
+
+.step {
+	margin-top: 1rem;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.step span {
+	flex: 1 1 100%;
+}
+
+.step .label {
+	font-weight: 600;
+}
+
+.step label {
+	all: unset;
+	pointer-events: none;
+	flex: 1 1 auto;
+	margin-right: 0.25rem;
+
+	&:hover {
+		box-shadow: unset;
+	}
+}
+
+.step textarea {
+	resize: none;
+	width: 100%;
+	height: 10ch;
+	font-size: 1rem;
+	font-family: inherit;
+	pointer-events: auto;
+}
+
+.step button {
+	align-self: flex-end;
+}
+
+.stepList button {
+	margin-top: 0.5rem;
+}
+
+[type='number'],
+[name='title'],
+[name='name'] {
+	min-width: 0;
+}
+
+[name='name'] {
+	flex: 1 1 0px;
+}
+
+[name='title'] {
+	font-size: 2rem;
+	height: 3rem;
+}
+
+[type='number'] {
+	appearance: textfield;
+	display: inline-flex;
+	flex: 0 0 6ch;
+
+	&::-webkit-inner-spin-button,
+	&::-webkit-outer-spin-button {
+		-webkit-appearance: none;
+	}
+
+	@media (min-width: 50rem) {
+		flex: 0 0 6.5ch;
+	}
+}
+
+.editMetadata .cookingTime span:not(:first-child) {
+	flex: unset;
+	align-self: center;
+	margin-left: 0.25rem;
+	font-size: 1.25rem;
+}
+
+@media print {
+	:root,
+	body {
+		overflow: auto;
+		display: unset;
+	}
+}
+
+.image {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.image img {
+	margin-bottom: 0.25rem;
+	border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.image label {
+	flex: 1 1 auto;
+	border-radius: 0 0 0 0.5rem;
+	width: 0px;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.image input {
+	display: none;
+}
+
+.image button {
+	margin-left: 0.25rem;
+	border-radius: 0 0 0.5rem 0;
+}
+
+.modal-container {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	right: -100vw;
+	bottom: 0;
+	left: -100vw;
+	background-color: #00000080;
+}
+
+.modal {
+	width: calc(100vw - 4rem);
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 auto;
+
+	@media (min-width: 50rem) {
+		width: 50vw;
+	}
+}
+
+.modal .content {
+	width: 100%;
+	background: #ffffff;
+	border-radius: 0.5rem 0.5rem 0 0;
+	padding: 1rem;
+	margin-bottom: 0.25rem;
+}
+
+.modal button {
+	flex: 1 1 auto;
+
+	&:hover {
+		box-shadow: 0 0.5px 1.4px rgba(0, 0, 0, 0.105), 0 1.5px 3.8px rgba(0, 0, 0, 0.15), 0 3.6px 9px rgba(0, 0, 0, 0.195), 0 12px 30px rgba(0, 0, 0, 0.3);
+	}
+}
+
+.modal button:first-of-type {
+	border-radius: 0 0 0 0.5rem;
+}
+
+.modal button + button {
+	margin-left: 0.25rem;
+	border-radius: 0 0 0.5rem 0;
+}
+
+.previewList h2 {
+	margin-bottom: 0.5rem;
+}
+.previewList .recipe:nth-child(3) {
+	display: none;
+
+	@media (min-width: 50rem) {
+		display: flex;
+	}
+}

@@ -1,0 +1,29 @@
+{
+	"name": "Dumplings",
+	"identifier": "dumplings",
+	"thumbnail": true,
+	"titleimage": true,
+	"cookingTime": 45,
+	"difficulty": 3,
+	"diets": ["Vegetarisch", "Vegan", "Zuckerfrei"],
+	"ingredients": [
+		{
+			"name": "Hamburger Brötchen",
+			"amount": 1,
+			"unit": "amount"
+		},
+		{
+			"name": "Hackfleisch",
+			"amount": 150,
+			"unit": "g"
+		},
+		{
+			"name": "Tomatenketchup",
+			"amount": 4,
+			"unit": "ml"
+		}
+	],
+	"steps": ["Forme das Hackfleisch und brate es", "Lege das Gebratene Hackfleisch auf das Brötchen", "Schmiere Tomatenketchup Obendrauf"],
+	"published": 1607745576464,
+	"favourisations": 8
+}
