@@ -5,7 +5,7 @@
 	"titleimage": true,
 	"cookingTime": 20,
 	"difficulty": 1,
-	"diets": ["Vegetarisch", "Lactosefrei", "Glutenfrei"],
+	"diets": ["Vegetarisch", "Lactosefrei"],
 	"ingredients": [
 		{
 			"name": "weiche Butter",

@@ -3,27 +3,47 @@
 	"identifier": "muffins",
 	"thumbnail": true,
 	"titleimage": true,
-	"cookingTime": 30,
-	"difficulty": 2,
+	"cookingTime": 10,
+	"difficulty": 1,
 	"diets": ["Vegetarisch"],
 	"ingredients": [
 		{
-			"name": "Hamburger Brötchen",
-			"amount": 1,
-			"unit": "amount"
-		},
-		{
-			"name": "Hackfleisch",
-			"amount": 150,
+			"name": "Mehl",
+			"amount": 260,
 			"unit": "g"
 		},
 		{
-			"name": "Tomatenketchup",
-			"amount": 4,
+			"name": "Zucker",
+			"amount": 100,
+			"unit": "g"
+		},
+		{
+			"name": "Backpulver",
+			"amount": 10,
+			"unit": "g"
+		},
+		{
+			"name": "Salz",
+			"amount": 3,
+			"unit": "g"
+		},
+		{
+			"name": "Milch (Zimmertemperatur)",
+			"amount": 180,
 			"unit": "ml"
+		},
+		{
+			"name": "flüssige, kühle Butter",
+			"amount": 114,
+			"unit": "g"
+		},
+		{
+			"name": "Eier (Groß)",
+			"amount": 2,
+			"unit": "amount"
 		}
 	],
-	"steps": ["Forme das Hackfleisch und brate es", "Lege das Gebratene Hackfleisch auf das Brötchen", "Schmiere Tomatenketchup Obendrauf"],
+	"steps": ["Wärme den Ofen auf 180°C vor, und befülle ein Muffinblech mit Papierförmchen.", "Mische in einer Schüssel Mehl, Zucker, Backpulver und Salz zusammen.", "Mische in einer seperaten Schüssel Milch, Butter und Eier zusammen.", "Rühre die erste Mischung ein, bis sie verbunden sind.", "Verteile den Teig gleichmäßig auf die muffinformen.", "Backe die Muffins für 20-25 Minuten und lasse sie abkühlen."],
 	"published": 1607684377712,
 	"favourisations": 283
 }

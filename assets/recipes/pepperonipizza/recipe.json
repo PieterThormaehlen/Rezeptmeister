@@ -3,27 +3,62 @@
 	"identifier": "pepperonipizza",
 	"thumbnail": true,
 	"titleimage": true,
-	"cookingTime": 40,
+	"cookingTime": 50,
 	"difficulty": 2,
 	"diets": ["Lactosefrei"],
 	"ingredients": [
 		{
-			"name": "Hamburger Brötchen",
-			"amount": 1,
-			"unit": "amount"
-		},
-		{
-			"name": "Hackfleisch",
-			"amount": 150,
+			"name": "Trockenhefe",
+			"amount": 4,
 			"unit": "g"
 		},
 		{
-			"name": "Tomatenketchup",
-			"amount": 4,
+			"name": "Zucker",
+			"amount": 15,
+			"unit": "g"
+		},
+		{
+			"name": "Wasser (warm)",
+			"amount": 110,
 			"unit": "ml"
+		},
+		{
+			"name": "Olivenöl",
+			"amount": 15,
+			"unit": "ml"
+		},
+		{
+			"name": "Mehl",
+			"amount": 200,
+			"unit": "g"
+		},
+		{
+			"name": "Passierte Tomaten",
+			"amount": 80,
+			"unit": "ml"
+		},
+		{
+			"name": "Pepperoni",
+			"amount": 50,
+			"unit": "g"
+		},
+		{
+			"name": "Mozzarella",
+			"amount": 100,
+			"unit": "g"
+		},
+		{
+			"name": "Emmentaler",
+			"amount": 80,
+			"unit": "g"
+		},
+		{
+			"name": "Chili",
+			"amount": 2,
+			"unit": "amount"
 		}
 	],
-	"steps": ["Forme das Hackfleisch und brate es", "Lege das Gebratene Hackfleisch auf das Brötchen", "Schmiere Tomatenketchup Obendrauf"],
+	"steps": ["Vermische die Trockenhefe und den Zucker, gebe das warme Wasser hinzu, rühre es kurz und warte ca. 10 Minuten.", "Mische das Olivenöl dazu, rühre die hälfte des Mehls ein, und rühre für ca. 5 Minuten weiter.", "Gebe den rest vom Mehl dazu, knete den Teig für 10 Minuten und lass ihn eine Stunde gehen.", "Wärme den Ofen vor auf 220°C Umluft und verteile Olivenöl in einem Blech.", "Breite den Teig mit den Händen im Blech aus ohne ihn vorher zu Kneten.", "Verteile die Passierten Tomaten auf der Pizza, Reibe den Käse und streue ihn darüber.", "Schneide die Chili in ringe und die Pepperoni in Scheiben, verteile beides auf der Pizza und Backe sie für 10-12 Minuten."],
 	"published": 1605899828166,
 	"favourisations": 312
 }
