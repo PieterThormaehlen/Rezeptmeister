@@ -51,15 +51,10 @@ const Recipe = class {
 	favourise() {
 		let favourites = JSON.parse(localStorage.favourites)
 		this.favourised = !this.favourised
-		if (this.favourised) {
-			favourites.push(this.identifier)
-			this.favourisations++
-		} else {
-			favourites = favourites.filter((favourite) => favourite !== this.identifier)
-			this.favourisations--
-		}
+		if (this.favourised) favourites.push(this.identifier)
+		else favourites = favourites.filter((favourite) => favourite !== this.identifier)
 		localStorage.favourites = JSON.stringify(favourites)
-		console.log(`${this.name} favourisation is: ${this.favourised}`, this.favourisations)
+		console.log(`${this.name} favourisation is: ${this.favourised}`, this.favourisations + this.favourised)
 		return this
 	}
 }
@@ -231,8 +226,6 @@ const getRecipe = async (identifier) => {
 
 const initRecipePage = async () => {
 	const recipe = await getRecipe(window.location.hash.split('#').pop())
-	favourisations = recipe.favourisations
-	if (recipe.favourised) favourisations++
 	document.querySelector('.controls').addEventListener('click', (e) => {
 		if (!e.target.closest('button')) return
 		const target = e.target.closest('button')
@@ -240,7 +233,7 @@ const initRecipePage = async () => {
 		if (target.classList.contains('favourise')) {
 			recipe.favourise()
 			document.querySelector('.favourise').toggleAttribute('favourised')
-			document.querySelector('.favourise .label').textContent = favourisations
+			document.querySelector('.favourise .label').textContent = recipe.favourisations + recipe.favourised
 		}
 	})
 	document.querySelector('h1').innerText = recipe.name
@@ -248,7 +241,7 @@ const initRecipePage = async () => {
 	if (recipe.favourised) {
 		document.querySelector('.favourise').setAttribute('favourised', '')
 	}
-	document.querySelector('.favourise .label').textContent = favourisations
+	document.querySelector('.favourise .label').textContent = recipe.favourisations + recipe.favourised
 	if (recipe.source === 'localStorage') {
 		document.getElementById('editButton').after(document.getElementById('editButton').content)
 	}
