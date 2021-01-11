@@ -1,0 +1,44 @@
+{
+	"name": "Käsenudeln",
+	"identifier": "käsenudeln",
+	"thumbnail": true,
+	"titleimage": true,
+	"cookingTime": 40,
+	"difficulty": 1,
+	"diets": ["Vegetarisch", "Lactosefrei", "Zuckerfrei"],
+	"ingredients": [
+		{
+			"name": "Nudeln",
+			"amount": 100,
+			"unit": "g"
+		},
+		{
+			"name": "Käse (Emmentaler oder Gouda)",
+			"amount": 50,
+			"unit": "g"
+		},
+		{
+			"name": "Schnittlauch",
+			"amount": 8,
+			"unit": "g"
+		},
+		{
+			"name": "Olivenöl",
+			"amount": 10,
+			"unit": "ml"
+		},
+		{
+			"name": "Salz",
+			"amount": 1,
+			"unit": "g"
+		},
+		{
+			"name": "Pfeffer",
+			"amount": 1,
+			"unit": "g"
+		}
+	],
+	"steps": ["Zuerst die Nudeln bissfest kochen, oder stattdessen Reste verwenden.", "Käse reiben oder klein schneiden und Schnittlauch waschen und fein hacken.", "In einer Pfanne das Olivenöl erhitzen und die Nudeln kurz darin schwenken. Anschließend den Käse dazu geben, kurz durchmischen und den Schnittlauch sowie Salz und Pfeffer hinzugeben. Dabei regelmäßig umrühren bis der Käse geschmolzen ist."],
+	"published": 1601025454767,
+	"favourisations": 72
+}
