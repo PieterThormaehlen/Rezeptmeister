@@ -225,7 +225,7 @@ const getRecipe = async (identifier) => {
 }
 
 const initRecipePage = async () => {
-	const recipe = await getRecipe(window.location.hash.split('#').pop())
+	const recipe = await getRecipe(window.decodeURI(window.location.hash.split('#').pop()))
 	document.querySelector('.controls').addEventListener('click', (e) => {
 		if (!e.target.closest('button')) return
 		const target = e.target.closest('button')
@@ -398,7 +398,7 @@ const modal = (question, callback) => {
 }
 
 const initEditRecipePage = async () => {
-	const recipe = await getRecipe(window.location.hash.split('#').pop())
+	const recipe = await getRecipe(window.decodeURI(window.location.hash.split('#').pop()))
 	const form = document.querySelector('form')
 	document.querySelector('.controls').addEventListener('click', (e) => {
 		if (!e.target.closest('button')) return

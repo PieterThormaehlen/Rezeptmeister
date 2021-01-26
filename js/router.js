@@ -2,11 +2,11 @@ Router = class {
 	constructor(routes) {
 		this.routes = routes
 
-		const matchedRoute = this.matchPathnameToRoute(window.location.pathname)
+		const matchedRoute = this.matchPathnameToRoute(window.decodeURI(window.location.pathname))
 		this.updateRouterOutlet(matchedRoute)
 
 		window.addEventListener('popstate', () => {
-			const matchedRoute = this.matchPathnameToRoute(window.location.pathname)
+			const matchedRoute = this.matchPathnameToRoute(window.decodeURI(window.location.pathname))
 			this.updateRouterOutlet(matchedRoute)
 		})
 
