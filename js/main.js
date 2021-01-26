@@ -561,12 +561,12 @@ const stepInput = (step = '') => {
 
 const initMainPage = () => {
 	document.querySelectorAll('main > section').forEach((section) => {
-		if (section.id === 'quickAndEasy') {
-			const recipelist = recipes.public.filtrate({ difficulty: 1 }).order('cookingTime').slice(0, 3)
-			placeRecipes(recipelist, '#quickAndEasy .recipes')
-		} else if (section.id === 'mostPopular') {
-			const recipelist = recipes.public.order('popularity').slice(0, 3)
-			placeRecipes(recipelist, '#mostPopular .recipes')
-		}
+		let recipelist
+		if (section.id === 'quickAndEasy') recipelist = recipes.public.filtrate({ difficulty: 1 }).order('cookingTime')
+		if (section.id === 'mostPopular') recipelist = recipes.public.order('popularity')
+		if (section.id === 'sugarfree') recipelist = recipes.public.filtrate({ diets: ['Zuckerfrei'] }).order('relevancy')
+		if (section.id === 'recentlyAdded') recipelist = recipes.public.order('creationDate')
+		if (section.id === 'vegetarian') recipelist = recipes.public.filtrate({ diets: ['Vegetarisch'] }).order('relevancy')
+		placeRecipes(recipelist.slice(0, 3), `#${section.id} .recipes`)
 	})
 }
