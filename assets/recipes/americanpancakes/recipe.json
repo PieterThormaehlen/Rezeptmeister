@@ -1,0 +1,49 @@
+{
+	"name": "American Pancakes",
+	"identifier": "americanpancakes",
+	"thumbnail": true,
+	"titleimage": true,
+	"cookingTime": 10,
+	"difficulty": 1,
+	"diets": ["Vegetarisch"],
+	"ingredients": [
+		{
+			"name": "Mehl",
+			"amount": 250,
+			"unit": "g"
+		},
+		{
+			"name": "Zucker",
+			"amount": 15,
+			"unit": "g"
+		},
+		{
+			"name": "Backpulver",
+			"amount": 9,
+			"unit": "g"
+		},
+		{
+			"name": "Eier",
+			"amount": 2,
+			"unit": "amount"
+		},
+		{
+			"name": "Salz",
+			"amount": 1,
+			"unit": "g"
+		},
+		{
+			"name": "Milch",
+			"amount": 175,
+			"unit": "ml"
+		},
+		{
+			"name": "Butter",
+			"amount": 30,
+			"unit": "g"
+		}
+	],
+	"steps": ["Alle Zutaten bis auf die Butter miteinander verrühren, bis ein gleichmäßiger Teig entstanden ist.", "Etwas Butter in eine Pfanne geben und auf mittlerer Stufe erhitzen.", "für jeden Pancake 2 EL Teig in die Pfanne geben, 2 Minuten ausbacken dann wenden und nochmal 2 Minuten backen."],
+	"published": 1610670073030,
+	"favourisations": 12
+}

@@ -1,0 +1,34 @@
+{
+	"name": "Frühstücksmüsli",
+	"identifier": "frühstücksmüsli",
+	"thumbnail": true,
+	"titleimage": true,
+	"cookingTime": 5,
+	"difficulty": 1,
+	"diets": ["Vegetarisch", "Zuckerfrei"],
+	"ingredients": [
+		{
+			"name": "Joghurt",
+			"amount": 250,
+			"unit": "g"
+		},
+		{
+			"name": "Haferflocken",
+			"amount": 70,
+			"unit": "g"
+		},
+		{
+			"name": "Nüsse und Kerne",
+			"amount": 30,
+			"unit": "g"
+		},
+		{
+			"name": "Apfel",
+			"amount": 1,
+			"unit": "amount"
+		}
+	],
+	"steps": ["Den Joghurt ein eine Schüssel füllen, danach die Haferflocken, Nüsse und Kerne darunter mischen.", "Apfel klein schneiden und vom kerngehäuse befreien, und auch dazu mischen."],
+	"published": 1610437044607,
+	"favourisations": 7
+}

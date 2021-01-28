@@ -3,27 +3,52 @@
 	"identifier": "croissants",
 	"thumbnail": true,
 	"titleimage": true,
-	"cookingTime": 180,
+	"cookingTime": 60,
 	"difficulty": 3,
 	"diets": ["Vegetarisch"],
 	"ingredients": [
 		{
-			"name": "Hamburger Brötchen",
-			"amount": 1,
-			"unit": "amount"
-		},
-		{
-			"name": "Hackfleisch",
-			"amount": 150,
+			"name": "Mehl",
+			"amount": 250,
 			"unit": "g"
 		},
 		{
-			"name": "Tomatenketchup",
-			"amount": 4,
+			"name": "Butter (weich)",
+			"amount": 50,
+			"unit": "g"
+		},
+		{
+			"name": "Zucker",
+			"amount": 30,
+			"unit": "g"
+		},
+		{
+			"name": "Salz",
+			"amount": 3,
+			"unit": "g"
+		},
+		{
+			"name": "Hefe (frisch)",
+			"amount": 12,
+			"unit": "g"
+		},
+		{
+			"name": "Wasser (kalt)",
+			"amount": 115,
 			"unit": "ml"
+		},
+		{
+			"name": "Milch",
+			"amount": 5,
+			"unit": "g"
+		},
+		{
+			"name": "Butter (kalt)",
+			"amount": 125,
+			"unit": "g"
 		}
 	],
-	"steps": ["Forme das Hackfleisch und brate es", "Lege das Gebratene Hackfleisch auf das Brötchen", "Schmiere Tomatenketchup Obendrauf"],
-	"published": 1586285262966,
-	"favourisations": 39
+	"steps": ["Das Mehl mit dem Zucker, der weichen Butter, dem Salz und der zerbröckelten Hefe vermengen. In die Küchenmaschine geben und etwa 6 Minuten kneten. Dabei langsam Wasser und Milch zugeben. Der Teig sollte elastisch homogen sein und nicht mehr am Schüsselrand kleben.", "Dann auf einer bemehlten Arbeitsfläche zu einem Rechteck ausrollen. Das Rechteck in Folie legen und für mindestens 2 Stunden in den Kühlschrank legen.", "Die kalte Butter auf einer Hälfte des Rechtecks verteilen und die andere hälfte darüber schlagen. Den doppelt gelegten Teig mit der Butter in der Mitte nun zu einer Dicke von 6 - 7 mm als Rechteck ausrollen. Die untere Hälfte des Rechtecks bis zur Mitte klappen, mit der oberen Hälfte genauso verfahren. Die Ränder sollen sich in der Mitte berühren. Noch einmal mittig zusammenschlagen. Man erhält 4 Schichten. In Folie einschlagen und 1 Stunde in den Kühlschrank legen.", "Nun den Teig als Rechteck zu einer Dicke von 6 mm ausrollen. Ein Drittel des Teiges einschlagen und die anderen 2/3 drüber legen. Man erhält 3 Schichten. In Folie einschlagen und für eine Stunde in den Kühlschrank.", "Nun den Teig zu einem Quadrat ausrollen, 3 - 4 mm dick. Nun in 2 oder 3 (je nach gewünschter Größe der Croissants) Streifen schneiden, und die Streifen in Dreiecke schneiden. Die Dreiecke zu Croissants aufrollen, dabei am langen Ende beginnen und zur Spitze hin aufrollen. Zu Croissants formen.", "Die Croissants nun auf ein gefettetes oder mit Backpapier ausgelegtes Backblech legen, mit leicht gezuckerter Milch bestreichen und 1 - 2 Stunden gehen lassen. 12 - 15 Minuten bei 180°C backen."],
+	"published": 1597542365212,
+	"favourisations": 143
 }

@@ -1,0 +1,44 @@
+{
+	"name": "Focaccia",
+	"identifier": "focaccia",
+	"thumbnail": true,
+	"titleimage": true,
+	"cookingTime": 20,
+	"difficulty": 2,
+	"diets": ["Vegetarisch", "Vegan", "Lactosefrei"],
+	"ingredients": [
+		{
+			"name": "Mehl (Weizen oder Dinkel)",
+			"amount": 500,
+			"unit": "g"
+		},
+		{
+			"name": "Zucker",
+			"amount": 8,
+			"unit": "g"
+		},
+		{
+			"name": "Trockenhefe",
+			"amount": 7,
+			"unit": "g"
+		},
+		{
+			"name": "Salz",
+			"amount": 8,
+			"unit": "g"
+		},
+		{
+			"name": "Wasser (warm)",
+			"amount": 320,
+			"unit": "ml"
+		},
+		{
+			"name": "Olivenöl",
+			"amount": 15,
+			"unit": "ml"
+		}
+	],
+	"steps": ["Mehl, Zucker, Hefe und Salz in einer großen Rührschüssel vermischen.", "Wasser und Olivenöl dazu gießen und alles verrühren, bis die Mischung zusammenklumpt.", "Dann auf eine Arbeitsfläche geben und mit den Händen ca. 5-10 Minuten kneten, bis sich ein glatter geschmeidiger Teig bildet.", "Den Teig anschließend zu einer Kugel formen und in eine leicht geölte Schüssel legen. Die Schüssel mit einem Küchentuch abdecken und an einen warmen Ort stellen. Lasse den Teig dort 45-60 Minuten gehen, bis sich der Teig fast verdoppelt hat.", "Anschließend den Teig auf eine leicht bemehlte Oberfläche geben und zu einem ca. 1cm dicken großen Rechteck ausrollen. In eine geölte Backform legen und mit den Händen in die Ecken ziehen. Die Form abdecken und den Teig weitere 20 Minuten gehen lassen.", "Währenddessen den Ofen auf 200°C vorheizen.", "Nach der Ruhezeit mit dem Stiel eines Kochlöffels oder mit den Fingern dellen in den Focaccia-Teig drücken. Dann nach belieben Kirschtomaten, Oliven und Rosmarin auf den Teig legen und leicht hineindrücken. Zuletzt ca. 1-2 EL Olivenöl gleichmäßig über den Teig träufeln und mit Salz und Paprikapulver bestreuen.", "Das Focaccia ca. 20 Minuten backen oder bis der Teig leicht goldbraun und durchgebacken ist. Anschließend aus dem Ofen nehmen und auf Wunsch mit etwas mehr Olivenöl beträufeln und genießen."],
+	"published": 1600265121850,
+	"favourisations": 21
+}

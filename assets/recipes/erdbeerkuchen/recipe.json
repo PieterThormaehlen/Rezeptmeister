@@ -1,0 +1,69 @@
+{
+	"name": "Erdbeerkuchen",
+	"identifier": "erdbeerkuchen",
+	"thumbnail": true,
+	"titleimage": true,
+	"cookingTime": 30,
+	"difficulty": 1,
+	"diets": ["Vegetarisch"],
+	"ingredients": [
+		{
+			"name": "Eier",
+			"amount": 3,
+			"unit": "amount"
+		},
+		{
+			"name": "Wasser (kaltes)",
+			"amount": 30,
+			"unit": "ml"
+		},
+		{
+			"name": "Zucker",
+			"amount": 105,
+			"unit": "g"
+		},
+		{
+			"name": "Vanillezucker",
+			"amount": 8,
+			"unit": "g"
+		},
+		{
+			"name": "Mehl",
+			"amount": 90,
+			"unit": "g"
+		},
+		{
+			"name": "Butter",
+			"amount": 10,
+			"unit": "g"
+		},
+		{
+			"name": "Semmelbrösel",
+			"amount": 15,
+			"unit": "g"
+		},
+		{
+			"name": "Milch",
+			"amount": 250,
+			"unit": "ml"
+		},
+		{
+			"name": "Vanillepuddingpulver",
+			"amount": 18,
+			"unit": "g"
+		},
+		{
+			"name": "Erdbeeren",
+			"amount": 700,
+			"unit": "g"
+		},
+		{
+			"name": "roter Tortenguss",
+			"amount": 12,
+			"unit": "g"
+		}
+	],
+	"steps": ["Den Ofen auf 180 Grad (Umluft: 160 Grad) vorheizen. Eine Obstbodenform oder Springform (Ø 26cm) gut einfetten und mit Semmelbrösel bestreuen.", "Für den Biskuitboden das Eiweiß mit 2 EL kaltem Wasser, 90 gramm Zucker und dem Vanillezucker steif schlagen. Eigelbe kurz unterrühren. Mehl mit einem Teigspatel unterheben. Biskuitteig in die Form geben und im vorgeheizten Ofen circa 20 Minuten backen.", "Den Biskuitboden mit einem Tortenring einrahmen. Für den Belag das halbe Päckchen Vanillepuddingpulver mit Milch und Zucker nach Packungsanleitung zubereiten. Pudding auf den Biskuitboden geben und glatt streichen. Erdbeeren waschen und putzen und auf die Puddingmasse setzen. Kurz abkühlen lassen.", "Den roten Tortenguss nach Packungsanleitung zubereiten und über die Erdbeeren gießen. Guss fest werden lassen. Wenn der Guss fest ist, mit einem Messer zwischen Tortenring und Kuchen entlang fahren und vorsichtig den Tortenring entfernen."],
+	"published": 1603438648002,
+	"favourisations": 21
+}
