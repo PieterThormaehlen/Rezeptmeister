@@ -4,7 +4,6 @@
 	font-size: 1rem;
 	color: #202020;
 	background-color: #f8f8f8;
-	overflow: hidden;
 
 	::selection {
 		background: #e0e0e0;
@@ -20,14 +19,19 @@
 }
 
 body {
-	overflow: hidden;
 	height: 100vh;
-	width: 100vw;
-	display: flex;
-	flex-direction: column;
+	width: 100%;
+
+	&[data-shownav],
+	&[data-showModal] {
+		overflow: hidden;
+		user-select: none;
+	}
 }
 
 header {
+	position: fixed;
+	width: 100%;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -35,7 +39,6 @@ header {
 	z-index: 3;
 	background-color: #ffffff;
 	box-shadow: 0 0.5px 1.4px rgba(0, 0, 0, 0.02625), 0 1.5px 3.8px rgba(0, 0, 0, 0.0375), 0 3.6px 9px rgba(0, 0, 0, 0.04875), 0 12px 30px rgba(0, 0, 0, 0.075);
-	flex: 0 0 auto;
 
 	@media (min-width: 50rem) {
 		height: 5rem;
@@ -103,7 +106,7 @@ nav {
 	flex-direction: column;
 	align-items: stretch;
 	overflow-y: auto;
-	z-index: -1;
+	z-index: 1;
 
 	[data-shownav] & {
 		display: flex;
@@ -148,20 +151,16 @@ nav a svg {
 }
 
 .container {
-	overflow: auto;
-	flex-grow: 1;
+	padding-top: 4rem;
+
+	@media (min-width: 50rem) {
+		padding-top: 5rem;
+	}
 
 	[data-shownav] &,
 	[data-showModal] & {
 		overflow: hidden;
 		user-select: none;
-	}
-
-	@media (min-width: 50rem) {
-		[data-shownav] & {
-			overflow: auto;
-			user-select: unset;
-		}
 	}
 }
 
@@ -683,10 +682,12 @@ img {
 }
 
 @media print {
-	:root,
-	body {
-		overflow: auto;
-		display: unset;
+	header {
+		position: unset;
+	}
+
+	.container {
+		padding-top: unset;
 	}
 }
 
@@ -720,7 +721,7 @@ img {
 
 .modal-container {
 	position: absolute;
-	z-index: 1;
+	z-index: 2;
 	top: 0;
 	right: -100vw;
 	bottom: 0;

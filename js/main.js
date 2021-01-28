@@ -382,7 +382,6 @@ const getImage = (image) => {
 
 const modal = (question, callback) => {
 	const modal = document.getElementById('modalTemplate').content.cloneNode(true)
-	modal.querySelector('.modal').style.transform = `translateY(${document.querySelector('.container').scrollTop + 100}px)`
 	modal.querySelector('.content').textContent = question
 	modal.querySelector('.modal').addEventListener('click', (e) => {
 		if (!e.target.closest('button')) return
@@ -395,6 +394,7 @@ const modal = (question, callback) => {
 	})
 	document.querySelector('body').setAttribute('data-showModal', '')
 	document.querySelector('main').appendChild(modal)
+	document.querySelector('.modal').style.transform = `translateY(${scrollY + (innerHeight - document.querySelector('header').offsetHeight - document.querySelector('.modal').offsetHeight) / 2}px)`
 }
 
 const initEditRecipePage = async () => {
