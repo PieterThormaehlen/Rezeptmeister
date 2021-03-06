@@ -1,0 +1,44 @@
+{
+	"name": "Kräuter Omelett",
+	"identifier": "kräuteromelett",
+	"thumbnail": true,
+	"titleimage": true,
+	"cookingTime": 10,
+	"difficulty": 1,
+	"diets": ["Vegetarisch", "Lactosefrei", "Glutenfrei", "Zuckerfrei"],
+	"ingredients": [
+		{
+			"name": "Eier",
+			"amount": 3,
+			"unit": "amount"
+		},
+		{
+			"name": "Kräuter (gemischt)",
+			"amount": 15,
+			"unit": "g"
+		},
+		{
+			"name": "Salz",
+			"amount": 1,
+			"unit": "g"
+		},
+		{
+			"name": "Pfeffer",
+			"amount": 2,
+			"unit": "g"
+		},
+		{
+			"name": "Olivenöl",
+			"amount": 10,
+			"unit": "g"
+		},
+		{
+			"name": "Käse",
+			"amount": 30,
+			"unit": "g"
+		}
+	],
+	"steps": ["Eier in einer schüssel aufschlagen, Kräuter, Salz und Pfeffer hinzu geben und gut vermischen.", "Etwas Olivenöl in eine Pfanne geben, auf mittlerer Stufe erhitzen und die Eimischung hinzugeben.", "Wenn nur die oberfläche noch flüssig ist den Käse auf dem Omelett verteilen und es zusammenklappen.", "Noch ein paar Minuten garen lassen und dann Servieren."],
+	"published": 1610891218937,
+	"favourisations": 48
+}

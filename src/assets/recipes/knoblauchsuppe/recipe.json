@@ -1,0 +1,59 @@
+{
+	"name": "Knoblauchsuppe",
+	"identifier": "knoblauchsuppe",
+	"thumbnail": true,
+	"titleimage": true,
+	"cookingTime": 10,
+	"difficulty": 1,
+	"diets": ["Vegetarisch", "Zuckerfrei"],
+	"ingredients": [
+		{
+			"name": "Knoblauch",
+			"amount": 20,
+			"unit": "g"
+		},
+		{
+			"name": "Zwiebel",
+			"amount": 0.5,
+			"unit": "amount"
+		},
+		{
+			"name": "butter",
+			"amount": 12,
+			"unit": "g"
+		},
+		{
+			"name": "Mehl",
+			"amount": 10,
+			"unit": "g"
+		},
+		{
+			"name": "Weißwein",
+			"amount": 80,
+			"unit": "ml"
+		},
+		{
+			"name": "Gemüsefond",
+			"amount": 400,
+			"unit": "ml"
+		},
+		{
+			"name": "Sahne",
+			"amount": 100,
+			"unit": "ml"
+		},
+		{
+			"name": "Salz",
+			"amount": 1,
+			"unit": "g"
+		},
+		{
+			"name": "Pfeffer",
+			"amount": 2,
+			"unit": "g"
+		}
+	],
+	"steps": ["Knoblauch und Zwiebel getrennt voneinander fein hacken, Butter in einen Topf erhitzen und die Zwiebel darin anschwitzen.", "Den Knoblauch und das Mehl dazugeben, umrühren, und nach kurzer zeit mit dem Weißwein Ablöschen und weiter umrühren.", "Die Gemüsebrühe dazugießen, erhitzen und alles auf kleiner Stufe ca. 30 Minuten köcheln lassen.", "Die Sahne einrühren, die Suppe fein pürieren, würzen und Servieren."],
+	"published": 1610230886905,
+	"favourisations": 94
+}

@@ -1,0 +1,54 @@
+{
+	"name": "Erbsensuppe",
+	"identifier": "erbsensuppe",
+	"thumbnail": true,
+	"titleimage": true,
+	"cookingTime": 30,
+	"difficulty": 1,
+	"diets": ["Vegetarisch", "Glutenfrei", "Zuckerfrei"],
+	"ingredients": [
+		{
+			"name": "Zwiebel",
+			"amount": 0.25,
+			"unit": "amount"
+		},
+		{
+			"name": "butter",
+			"amount": 8,
+			"unit": "g"
+		},
+		{
+			"name": "Erbsen",
+			"amount": 100,
+			"unit": "g"
+		},
+		{
+			"name": "Gemüsefond",
+			"amount": 200,
+			"unit": "ml"
+		},
+		{
+			"name": "Sahne",
+			"amount": 33,
+			"unit": "g"
+		},
+		{
+			"name": "Salz",
+			"amount": 1,
+			"unit": "g"
+		},
+		{
+			"name": "Muskatnuss",
+			"amount": 1,
+			"unit": "g"
+		},
+		{
+			"name": "Pfeffer",
+			"amount": 2,
+			"unit": "g"
+		}
+	],
+	"steps": ["Schneide die Zwiebel in kleine Würfel, schmelze die Butter in einem Topf, gebe die Zwiebel hinein und schwitze sie unter rührem circa 2 Minuten an.", "Mit Gemüsefond ablöschen und aufkochen. Die Erbsen hineingeben und nochmals aufkochen lassen. Püriere Die Erbsen mit einem Pürierstab zu einer feinen Suppe und gebe dabei nach und nach die Sahne dazu.", "gebe Salz, Pfeffer und Muskatnuss dazu und serviere die Suppe."],
+	"published": 1590468214905,
+	"favourisations": 34
+}

@@ -1,0 +1,39 @@
+{
+	"name": "Milchreis",
+	"identifier": "milchreis",
+	"thumbnail": true,
+	"titleimage": true,
+	"cookingTime": 20,
+	"difficulty": 1,
+	"diets": ["Vegetarisch", "Glutenfrei"],
+	"ingredients": [
+		{
+			"name": "Butter",
+			"amount": 10,
+			"unit": "g"
+		},
+		{
+			"name": "Milchreis",
+			"amount": 125,
+			"unit": "g"
+		},
+		{
+			"name": "Zucker",
+			"amount": 30,
+			"unit": "g"
+		},
+		{
+			"name": "Milch",
+			"amount": 500,
+			"unit": "ml"
+		},
+		{
+			"name": "Vanilleschote",
+			"amount": 0.5,
+			"unit": "amount"
+		}
+	],
+	"steps": ["In einem großen Topf die Butter schmelzen und anschließend den Reis kurz in der Butter anschwitzen.", "Die zimmerwarme Milch, den Zucker und das Mark einer halben Vanilleschote sowie die aufgeschlitzte Schote in den Topf geben. Alles unter Rühren einmal aufkochen lassen.", "Den Topf auf eine Herdplatte mit niedrigster Stufe stellen und den Milchreis im geschlossenen Topf 30 Minuten ziehen lassen. Nach der Hälfte der Zeit einmal umrühren.", "Vanilleschote entfernen und Milchreis servieren."],
+	"published": 1610236767234,
+	"favourisations": 32
+}

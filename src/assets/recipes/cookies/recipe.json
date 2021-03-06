@@ -1,0 +1,49 @@
+{
+	"name": "Cookies",
+	"identifier": "cookies",
+	"thumbnail": true,
+	"titleimage": true,
+	"cookingTime": 20,
+	"difficulty": 1,
+	"diets": ["Vegetarisch", "Lactosefrei"],
+	"ingredients": [
+		{
+			"name": "weiche Butter",
+			"amount": 250,
+			"unit": "g"
+		},
+		{
+			"name": "Zucker",
+			"amount": 260,
+			"unit": "g"
+		},
+		{
+			"name": "Eier",
+			"amount": 2,
+			"unit": "amount"
+		},
+		{
+			"name": "Mehl",
+			"amount": 280,
+			"unit": "g"
+		},
+		{
+			"name": "Natron",
+			"amount": 3,
+			"unit": "g"
+		},
+		{
+			"name": "Salz",
+			"amount": 5,
+			"unit": "g"
+		},
+		{
+			"name": "Schokoladen-Chips",
+			"amount": 300,
+			"unit": "g"
+		}
+	],
+	"steps": ["Butter und Zucker 3 Minuten schäumig mixen, Eier hinzugeben und weitere 3 Minuten mixen.", "Separat Mehl, Natron und Salz zusammenmischen, zur Buttermischung geben und vorsichtig unterrühren.", "Schokoladen-Chips zur mischung geben und unterheben.", "Backofen auf 190°C Umluft vorheizen, ein Backblech mit Backpapier auslegen und darauf kleine und gleich große Teighäufchen geben.", "10-13 Minuten backen und danach abkühlen lassen."],
+	"published": 1608285162779,
+	"favourisations": 17
+}

@@ -1,0 +1,44 @@
+{
+	"name": "Körnerbrot",
+	"identifier": "körnerbrot",
+	"thumbnail": true,
+	"titleimage": true,
+	"cookingTime": 10,
+	"difficulty": 1,
+	"diets": ["Vegetarisch", "Vegan", "Lactosefrei"],
+	"ingredients": [
+		{
+			"name": "Wasser (lauwarm)",
+			"amount": 500,
+			"unit": "ml"
+		},
+		{
+			"name": "Mehl nach Wahl (Weizen, Dinkel, Vollkorn etc.)",
+			"amount": 600,
+			"unit": "g"
+		},
+		{
+			"name": "Körner (z. B. Leinsamen, Kürbiskerne, Sonnenblumenkerne)",
+			"amount": 200,
+			"unit": "g"
+		},
+		{
+			"name": "Zucker",
+			"amount": 4,
+			"unit": "g"
+		},
+		{
+			"name": "Salz",
+			"amount": 10,
+			"unit": "g"
+		},
+		{
+			"name": "Trockenhefe",
+			"amount": 14,
+			"unit": "g"
+		}
+	],
+	"steps": ["Zuerst das Wasser in eine Rührschüssel geben, danach das Mehl und die Körner dazu. Mit Salz, Zucker und Trockenhefe verkneten und Ca. 30 Minuten gehen lassen.", "Auf ein Backblech geben und bei 200°C ca. 45 - 60 Minuten backen. Das Brot ist fertig, wenn es sich beim Draufklopfen hohl anhört."],
+	"published": 1610854580236,
+	"favourisations": 14
+}

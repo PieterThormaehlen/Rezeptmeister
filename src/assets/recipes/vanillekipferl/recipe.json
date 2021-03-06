@@ -1,0 +1,49 @@
+{
+	"name": "Vanillekipferl",
+	"identifier": "vanillekipferl",
+	"thumbnail": true,
+	"titleimage": true,
+	"cookingTime": 55,
+	"difficulty": 2,
+	"diets": ["Vegetarisch", "Lactosefrei"],
+	"ingredients": [
+		{
+			"name": "Mehl",
+			"amount": 200,
+			"unit": "g"
+		},
+		{
+			"name": "Zucker",
+			"amount": 80,
+			"unit": "g"
+		},
+		{
+			"name": "Butter",
+			"amount": 175,
+			"unit": "g"
+		},
+		{
+			"name": "Eigelb",
+			"amount": 2,
+			"unit": "amount"
+		},
+		{
+			"name": "Mandeln (gemahlen und geschält)",
+			"amount": 100,
+			"unit": "g"
+		},
+		{
+			"name": "Vanilleschote",
+			"amount": 0.5,
+			"unit": "amount"
+		},
+		{
+			"name": "Vanillezucker",
+			"amount": 50,
+			"unit": "g"
+		}
+	],
+	"steps": ["Verknete Mehl, Zucker, Butter, Eigelb, Mandeln, und das Mark von einer halben Vanilleschote zu einem glatten Teig, forme ihn in zwei lange rollen und stelle ihn für mindestens eine Stunde kalt.", "Schneide die Rollen in jeweils 40 Scheiben und forme jedes Teigstück mit den händen zu einer etwa 6cm langen, an den Enden spitz zulaufenden, gebogenen, Rolle und lege es auf ein mit Backpapier ausgelegtes Blech.", "Im vorgeheizten Ofen bei 175°C Umluft etwa 10 bis 15 Minuten backen.", "Kipferl vom Blech nehmen, noch heiß vorsichtig im Vanillezucker wälzen und Abkühlen lassen."],
+	"published": 1597765654723,
+	"favourisations": 64
+}
