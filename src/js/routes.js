@@ -16,19 +16,19 @@ const routes = [
 	{
 		path: 'Rezepte.html',
 		init() {
-			displayRecipeList('all', '.recipes')
+			displayRecipeList('.recipes', 'all')
 		},
 	},
 	{
 		path: 'Meine_Rezepte.html',
 		init() {
-			displayRecipeList('local', '.recipes')
+			displayRecipeList('.recipes', 'local')
 		},
 	},
 	{
 		path: 'Lieblingsrezepte.html',
 		init() {
-			displayRecipeList('favourised', '.recipes')
+			displayRecipeList('.recipes', 'favourised')
 		},
 	},
 	{
